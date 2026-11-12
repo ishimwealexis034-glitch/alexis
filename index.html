@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 IoT Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include MQTT.js via CDN for WebSocket connection -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-header">
+        <h1>ESP32 Industrial Automation Dashboard</h1>
+        <p>Connected to HiveMQ Cloud Broker</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h3>Temperature</h3>
+            <div id="temp" class="value">-- °C</div>
+        </div>
+        <div class="card">
+            <h3>Humidity</h3>
+            <div id="humidity" class="value">-- %</div>
+        </div>
+        <div class="card">
+            <h3>Red LED State</h3>
+            <div id="led" class="value status-off">OFF</div>
+        </div>
+        <div class="card">
+            <h3>Servo State</h3>
+            <div id="servo" class="value status-off">OFF</div>
+        </div>
+        <div class="card">
+            <h3>Buzzer (Water Level)</h3>
+            <div id="buzzer" class="value status-off">OFF</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
